@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Quicksand:wght@300&display=swap');
 
 body {
-    background-color: #3e2c2b; /* Cozy brown background color */
+    background-color: #2b1d1d; /* Cozy brown background color */
     color: #fff;
     font-family: 'Quicksand', sans-serif; /* Cozy font choice */
     text-align: center;
@@ -13,7 +13,7 @@ body {
     margin: 0 auto;
     padding: 20px;
     border-radius: 10px;
-    background-color: #3e2c2b; /* Match container background to body */
+    background-color: #2b1d1d; /* Match container background to body */
     color: #fff; /* Keep text white for good contrast */
 }
 
@@ -23,7 +23,7 @@ body {
 }
 
 h1, h2, h3 {
-    color: #fff;
+    color: #ffd700;
     font-family: 'Caveat', cursive; /* A handwritten style for headings */
 }
 
@@ -38,7 +38,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #ffd700;
     text-decoration: none;
     font-weight: bold;
 }
@@ -65,7 +65,7 @@ nav ul li a {
 }
 
 .chapters li a {
-    color: #fff;
+    color: #ffd700;
     text-decoration: none;
 }
 
