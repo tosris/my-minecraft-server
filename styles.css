@@ -143,8 +143,8 @@ article p {
 }
 
 .prev {
-    left: 10px; /* Move left arrow to the far left */
-    transform: translateY(-50%); /* Center it vertically */
+    left: 0;
+    border-radius: 3px 0 0 3px;
 }
 
 .prev:hover, .next:hover {
