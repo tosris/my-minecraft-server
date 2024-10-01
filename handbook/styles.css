@@ -1,0 +1,171 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Quicksand:wght@300&display=swap');
+
+body {
+    background-color: #1a1a1a; /* Cozy brown background color */
+    color: #fff;
+    font-family: 'Quicksand', sans-serif; /* Cozy font choice */
+    text-align: center;
+}
+
+.container {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #1a1a1a; /* Match container background to body */
+    color: #fff; /* Keep text white for good contrast */
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+h1, h2, h3 {
+    color: #ffd700;
+    font-family: 'Caveat', cursive; /* A handwritten style for headings */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffd700;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.handbook-content {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between text and links */
+}
+
+.handbook-text {
+    width: 60%; /* Left side width */
+    text-align: left; /* Align text to the left */
+}
+
+.chapter-links {
+    width: 30%; /* Right side width */
+    text-align: left; /* Align links to the left */
+}
+
+.chapters {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 20px 0;
+}
+
+.chapters li {
+    font-size: 1.1em;
+    margin: 15px 0;
+}
+
+.chapters li a {
+    color: #ffd700;
+    text-decoration: none;
+}
+
+article {
+    margin: 20px 0;
+}
+
+article h3 {
+    text-decoration: underline;
+}
+
+article p {
+    text-align: left;
+    padding: 0 20px;
+}
+
+.fun-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.fun-list li {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+/* Slideshow Styles */
+.slideshow-container {
+    position: relative;
+    max-width: 60%;
+    margin: 20px auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.slide {
+    display: none; /* Hide all slides by default */
+    width: 100%;
+    height: auto; /* Allow the height to adjust automatically */
+    border-radius: 10px;
+}
+
+
+
+.fade {
+    animation: fade 1s; /* Fade animation */
+}
+
+@keyframes fade {
+    from {opacity: 0.4} 
+    to {opacity: 1}
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5); /* Slightly transparent background */
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker on hover */
+}
+
+.dots-container {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.active {
+    background-color: #717171; /* Active dot color */
+}
