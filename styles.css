@@ -96,3 +96,54 @@ article p {
     font-size: 1.2em;
     margin: 10px 0;
 }
+
+/* Slideshow Styles */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: 20px auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.slide {
+    display: none; /* Hide all slides by default */
+    width: 100%;
+    border-radius: 10px;
+}
+
+.active {
+    display: block; /* Show the active slide */
+}
+
+.fade {
+    animation: fade 1s; /* Fade animation */
+}
+
+@keyframes fade {
+    from {opacity: 0.4} 
+    to {opacity: 1}
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5); /* Slightly transparent background */
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker on hover */
+}
