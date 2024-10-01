@@ -43,14 +43,19 @@ nav ul li a {
     font-weight: bold;
 }
 
-.fun-list {
-    list-style-type: none;
-    padding-left: 0;
+.handbook-content {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between text and links */
 }
 
-.fun-list li {
-    font-size: 1.2em;
-    margin: 10px 0;
+.handbook-text {
+    width: 60%; /* Left side width */
+    text-align: left; /* Align text to the left */
+}
+
+.chapter-links {
+    width: 30%; /* Right side width */
+    text-align: left; /* Align links to the left */
 }
 
 .chapters {
