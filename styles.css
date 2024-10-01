@@ -142,6 +142,11 @@ article p {
     border-radius: 3px 0 0 3px;
 }
 
+.prev {
+    left: 10px; /* Move left arrow to the far left */
+    transform: translateY(-50%); /* Center it vertically */
+}
+
 .prev:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.8); /* Darker on hover */
 }
