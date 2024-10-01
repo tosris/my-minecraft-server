@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Quicksand:wght@300&display=swap');
 
 body {
-    background-color: #1a0e0e; /* Cozy brown background color */
+    background-color: #1a1a1a; /* Cozy brown background color */
     color: #fff;
     font-family: 'Quicksand', sans-serif; /* Cozy font choice */
     text-align: center;
@@ -13,7 +13,7 @@ body {
     margin: 0 auto;
     padding: 20px;
     border-radius: 10px;
-    background-color: #1a0e0e; /* Match container background to body */
+    background-color: #1a1a1a; /* Match container background to body */
     color: #fff; /* Keep text white for good contrast */
 }
 
