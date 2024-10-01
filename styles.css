@@ -1,7 +1,10 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Quicksand:wght@300&display=swap');
+
 body {
     background-color: #000;
     color: #fff;
-    font-family: Arial, sans-serif;
+    font-family: 'Quicksand', sans-serif; /* Cozy font choice */
     text-align: center;
 }
 
@@ -20,6 +23,7 @@ body {
 
 h1, h2, h3 {
     color: #00ff00;
+    font-family: 'Caveat', cursive; /* A handwritten style for headings */
 }
 
 nav ul {
