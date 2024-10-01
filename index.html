@@ -36,6 +36,12 @@
                     <img src="image3.jpg" alt="Image 3" style="width:100%">
                 </div>
 
+                <div class="dots-container">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+                
                 <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
                 <a class="next" onclick="changeSlide(1)">&#10095;</a>
             </div>
@@ -52,34 +58,39 @@
     </div>
 
     <script>
-        let slideIndex = 0;
-        showSlides();
+       let slideIndex = 1; // Start at the first slide
+        showSlides(slideIndex);
 
-        function showSlides() {
+        // Function to show the current slide
+        function showSlides(n) {
             let slides = document.getElementsByClassName("slide");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1} // Loop back to first slide
+            if (n < 1) {slideIndex = slides.length} // Loop back to last slide
             for (let i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";  
             }
-            slideIndex++;
-            if (slideIndex > slides.length) {slideIndex = 1}    
+            for (let j = 0; j < dots.length; j++) {
+                dots[j].className = dots[j].className.replace(" active", "");
+            }
             slides[slideIndex - 1].style.display = "block";  
-            setTimeout(showSlides, 5000); // Change image every 5 seconds
+            dots[slideIndex - 1].className += " active"; // Mark the current dot as active
         }
 
+        // Function to change slides
         function changeSlide(n) {
-            slideIndex += n;
-            if (slideIndex > slides.length) {slideIndex = 1}
-            if (slideIndex < 1) {slideIndex = slides.length}
-            showSlidesManually(slideIndex);
+            showSlides(slideIndex += n);
         }
 
-        function showSlidesManually(index) {
-            let slides = document.getElementsByClassName("slide");
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
-            }
-            slides[index - 1].style.display = "block";  
+        // Function to set the current slide based on dot click
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
         }
+
+        // Automatic slideshow
+        setInterval(function() {
+            showSlides(slideIndex += 1);
+        }, 5000); // Change image every 5 seconds
     </script>
 </body>
 </html>
