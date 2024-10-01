@@ -147,3 +147,22 @@ article p {
 .prev:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.8); /* Darker on hover */
 }
+
+.dots-container {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.active {
+    background-color: #717171; /* Active dot color */
+}
