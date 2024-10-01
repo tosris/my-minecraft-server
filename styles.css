@@ -112,9 +112,7 @@ article p {
     border-radius: 10px;
 }
 
-.active {
-    display: block; /* Show the active slide */
-}
+
 
 .fade {
     animation: fade 1s; /* Fade animation */
