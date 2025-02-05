@@ -195,10 +195,11 @@ article p {
 #ip-address {
     display: inline-block;
     margin-right: 10px; /* Adds space between IP and the button */
+    text-align: center; /* Ensure text is centered */
 }
 
 #copy-btn {
-    padding: 5px 10px;
+    padding: 3px 8px;
     background-color: #333333;
     color: white;
     border: none;
