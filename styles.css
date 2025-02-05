@@ -109,7 +109,7 @@ article p {
 .slide {
     display: none; /* Hide all slides by default */
     width: 100%;
-    height: auto; /* Allow the height to adjust automatically */
+    /*height: auto;  Allow the height to adjust automatically */
     border-radius: 10px;
 }
 
