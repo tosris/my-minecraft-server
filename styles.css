@@ -192,3 +192,29 @@ article p {
 .active {
     background-color: #717171; /* Active dot color */
 }
+#ip-address {
+    display: inline-block;
+    margin-right: 10px; /* Adds space between IP and the button */
+}
+
+#copy-btn {
+    padding: 8px 15px;
+    background-color: #ffd700;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#copy-btn:hover {
+    background-color: #e5b700; /* Slightly darker shade when hovered */
+}
+
+.ip-container {
+    display: flex;
+    align-items: center; /* Vertically center the elements */
+    justify-content: center; /* Center both horizontally */
+    gap: 10px; /* Space between IP and button */
+}
