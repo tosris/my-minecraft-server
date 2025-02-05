@@ -106,13 +106,14 @@ article p {
     overflow: hidden;
 }
 
-.slide {
-    display: none; /* Hide all slides by default */
-    width: 100%;
+
+
+.slide img {
+    width: 100%; /* Ensure images span the full width of the container */
+    height: 400px; /* Set a fixed height for the images */
+    object-fit: cover; /* Maintain aspect ratio and ensure images fill the height */
     border-radius: 10px;
 }
-
-
 
 .fade {
     animation: fade 1s; /* Fade animation */
