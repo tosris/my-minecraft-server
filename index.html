@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Four Quarters</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" href="favicon.png"> <!-- Link to your favicon -->
+    <link rel="icon" type="image/png" href="favicon.png"> 
 </head>
 <body>
-    <!-- Page 1 - Homepage -->
     <div class="container">
         <header>
             <img src="favicon.png" alt="Server Logo" class="logo">
@@ -25,8 +24,6 @@
         <section>
             <h2>Välkommen in!</h2>
             <h1>IP: mc.4qs.se</h1>
-
-            <!-- Slideshow Section -->
             <div class="slideshow-container">
                 <div class="slide fade active">
                     <img src="image1.jpg" alt="Image 1" style="width:100%">
@@ -58,50 +55,41 @@
             </div>
             
            <!-- <ul class="fun-list">
-                <li>Livekarta <a href="http://mc.4qs.se:8080">Länk</a></li>
+                <li> <a href=""></a></li>
             </ul>-->
         </section>
     </div>
 
     <script>
-       let slideIndex = 1; // Start at the first slide
+       let slideIndex = 1; 
         showSlides(slideIndex);
 
-        // Function to show the current slide
         function showSlides(n) {
             let slides = document.getElementsByClassName("slide");
             let dots = document.getElementsByClassName("dot");
             let videos = document.getElementsByClassName("slide-video");
-            if (n > slides.length) {slideIndex = 1} // Loop back to first slide
-            if (n < 1) {slideIndex = slides.length} // Loop back to last slide
+            if (n > slides.length) {slideIndex = 1} 
+            if (n < 1) {slideIndex = slides.length} 
             for (let i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";  
-                // Pause all videos when slide is not active
                 if (videos[i]) videos[i].pause();
             }
             for (let j = 0; j < dots.length; j++) {
                 dots[j].className = dots[j].className.replace(" active", "");
             }
             slides[slideIndex - 1].style.display = "block";  
-            dots[slideIndex - 1].className += " active"; // Mark the current dot as active
-            // Play the video in the active slide
+            dots[slideIndex - 1].className += " active"; 
             if (videos[slideIndex - 1]) videos[slideIndex - 1].play();
         }
-
-        // Function to change slides
         function changeSlide(n) {
             showSlides(slideIndex += n);
         }
-
-        // Function to set the current slide based on dot click
         function currentSlide(n) {
             showSlides(slideIndex = n);
         }
-
-        // Automatic slideshow
         setInterval(function() {
             showSlides(slideIndex += 1);
-        }, 15000); // Change image every 5 seconds
+        }, 15000); 
     </script>
 </body>
 </html>
