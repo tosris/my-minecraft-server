@@ -41,6 +41,15 @@ nav ul li a {
     color: #ffd700;
     text-decoration: none;
     font-weight: bold;
+    position: relative;
+    display: inline-block;
+    padding: 5px 10px;
+    transition: transform 0.3s ease, color 0.3s ease; /* Adding transition for smooth hover effect */
+}
+
+nav ul li a:hover {
+    color: #ffffff; /* Change the color on hover */
+    transform: scale(1.1); /* Slightly enlarge the link on hover */
 }
 
 .handbook-content {
