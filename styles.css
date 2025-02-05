@@ -104,6 +104,7 @@ article p {
     margin: auto;
     border-radius: 10px;
     overflow: hidden;
+    height: 700px;
 }
 
 .slide {
