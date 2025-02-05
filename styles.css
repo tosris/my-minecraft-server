@@ -198,8 +198,8 @@ article p {
 }
 
 #copy-btn {
-    padding: 8px 15px;
-    background-color: #ffd700;
+    padding: 5px 10px;
+    background-color: #333333;
     color: white;
     border: none;
     cursor: pointer;
@@ -209,7 +209,7 @@ article p {
 }
 
 #copy-btn:hover {
-    background-color: #e5b700; /* Slightly darker shade when hovered */
+    background-color: #444444; /* Slightly darker shade when hovered */
 }
 
 .ip-container {
