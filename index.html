@@ -75,7 +75,18 @@
             document.execCommand('copy');
             document.body.removeChild(tempInput);
 
-            alert("IP Addressen Kopierad!!");
+              // Create the "IP Copied" message element
+            const copiedMessage = document.createElement('div');
+            copiedMessage.textContent = 'IP kopierad!';
+            copiedMessage.classList.add('copied-message');
+    
+            // Append the message to the body
+            document.body.appendChild(copiedMessage);
+    
+            // Remove the message after 3 seconds
+            setTimeout(() => {
+             copiedMessage.remove();
+            }, 3000);
         });
 
        let slideIndex = 1; 
