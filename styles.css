@@ -219,3 +219,32 @@ article p {
     justify-content: center; /* Center both horizontally */
     gap: 10px; /* Space between IP and button */
 }
+
+.copied-message {
+    position: fixed;
+    bottom: 20px; /* Adjust the distance from the bottom of the screen */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4caf50; /* Green background for success */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    opacity: 0;
+    animation: fadeInOut 3s forwards; /* Fade in and out animation */
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
