@@ -101,7 +101,7 @@ article p {
 .slideshow-container {
     position: relative;
     max-width: 60%;
-    margin: 20px auto;
+    margin: auto;
     border-radius: 10px;
     overflow: hidden;
 }
