@@ -23,7 +23,10 @@
         </nav>
         <section>
             <h2>Välkommen in!</h2>
-            <div class="ip-container"><h1 id="ip-address">IP: mc.4qs.se</h1><button id="copy-btn">Copy IP Address</button></div>
+            <div class="ip-container">
+                <h1 id="ip-address">IP: mc.4qs.se</h1>
+                <button id="copy-btn">Copy IP Address</button>
+            </div>
             <div class="slideshow-container">
                 <div class="slide fade active">
                     <img src="image1.jpg" alt="Image 1" style="width:100%">
@@ -64,16 +67,15 @@
         const copyButton = document.getElementById('copy-btn');
         const ipAddress = document.getElementById('ip-address');
 
-        // Function to copy the IP address to the clipboard
         copyButton.addEventListener('click', () => {
             const tempInput = document.createElement('input');
-            tempInput.value = ipAddress.textContent.replace('IP: ', ''); // Remove the "IP: " part
+            tempInput.value = ipAddress.textContent.replace('IP: ', ''); 
             document.body.appendChild(tempInput);
             tempInput.select();
             document.execCommand('copy');
             document.body.removeChild(tempInput);
 
-            alert("IP Address Copied!");
+            alert("IP Addressen Kopierad!!");
         });
 
        let slideIndex = 1; 
