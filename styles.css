@@ -106,12 +106,20 @@ article p {
     overflow: hidden;
 }
 
+/* Ensure no overflow is visible in the slide */
+.slide {
+    display: none; /* Hide all slides by default */
+    width: 100%;
+    height: 700px; /* Set the height of the slide */
+    border-radius: 10px;
+    overflow: hidden; /* Prevent any part of the image from peeking out */
+}
 
-
+/* Ensure images cover the slide container without leaving empty space */
 .slide img {
-    width: 100%; /* Ensure images span the full width of the container */
-    height: 400px; /* Set a fixed height for the images */
-    object-fit: cover; /* Maintain aspect ratio and ensure images fill the height */
+    width: 100%;
+    height: 100%; /* Make the image fill the slide container's height */
+    object-fit: cover; /* Keep the aspect ratio while covering the container */
     border-radius: 10px;
 }
 
