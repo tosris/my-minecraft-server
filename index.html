@@ -73,12 +73,16 @@
             if (n < 1) {slideIndex = slides.length} // Loop back to last slide
             for (let i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";  
+                // Pause all videos when slide is not active
+                if (videos[i]) videos[i].pause();
             }
             for (let j = 0; j < dots.length; j++) {
                 dots[j].className = dots[j].className.replace(" active", "");
             }
             slides[slideIndex - 1].style.display = "block";  
             dots[slideIndex - 1].className += " active"; // Mark the current dot as active
+            // Play the video in the active slide
+            if (videos[slideIndex - 1]) videos[slideIndex - 1].play();
         }
 
         // Function to change slides
