@@ -15,11 +15,9 @@
         </header>
         <nav>
             <ul>
-                <!--<li><a href="/">Startsida</a></li>-->
                 <li><a href="/handbook/">Handbok</a></li>
                 <li><a href="http://mc.4qs.se:8080">Livekarta</a></li>
                 <li><a href="https://forms.office.com/r/XSsVL5F9pT">Whitelist</a></li>
-                
             </ul>
         </nav>
         <section>
@@ -46,7 +44,6 @@
                     Your browser does not support the video tag.
                 </video>
                 </div>
-
                 <div class="dots-container">
                     <span class="dot" onclick="currentSlide(1)"></span>
                     <span class="dot" onclick="currentSlide(2)"></span>
@@ -57,13 +54,8 @@
                 <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
                 <a class="next" onclick="changeSlide(1)">&#10095;</a>
             </div>
-            
-           <!-- <ul class="fun-list">
-                <li> <a href=""></a></li>
-            </ul>-->
         </section>
     </div>
-
     <script>
         const copyButton = document.getElementById('copy-btn');
         const ipAddress = document.getElementById('ip-address');
@@ -75,24 +67,16 @@
             tempInput.select();
             document.execCommand('copy');
             document.body.removeChild(tempInput);
-
-              // Create the "IP Copied" message element
             const copiedMessage = document.createElement('div');
             copiedMessage.textContent = 'IP kopierad!';
             copiedMessage.classList.add('copied-message');
-    
-            // Append the message to the body
             document.body.appendChild(copiedMessage);
-    
-            // Remove the message after 3 seconds
             setTimeout(() => {
              copiedMessage.remove();
             }, 3000);
         });
-
        let slideIndex = 1; 
         showSlides(slideIndex);
-
         function showSlides(n) {
             let slides = document.getElementsByClassName("slide");
             let dots = document.getElementsByClassName("dot");
