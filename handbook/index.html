@@ -44,5 +44,33 @@
         </div>
         </section>
     </div>
+        <script>
+        const copyButton = document.getElementById('copy-btn');
+        const ipAddress = document.getElementById('ip-address');
+
+        copyButton.addEventListener('click', () => {
+            const tempInput = document.createElement('input');
+            tempInput.value = ipAddress.textContent.replace('IP: ', ''); 
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+              // Create the "IP Copied" message element
+            const copiedMessage = document.createElement('div');
+            copiedMessage.textContent = 'IP kopierad!';
+            copiedMessage.classList.add('copied-message');
+    
+            // Append the message to the body
+            document.body.appendChild(copiedMessage);
+    
+            // Remove the message after 3 seconds
+            setTimeout(() => {
+             copiedMessage.remove();
+            }, 3000);
+        });
+
+
+    </script>
 </body>
 </html>
