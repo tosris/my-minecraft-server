@@ -109,7 +109,9 @@ article p {
 /* Slideshow Styles */
 .slideshow-container {
     position: relative;
-    max-width: 60%;
+    width: 90%; /* Use a percentage width for responsiveness */
+    max-width: 700px; /* Set a max-width to prevent excessive stretching */
+    min-width: 300px; /* Prevent it from becoming too small */
     margin: auto;
     border-radius: 10px;
     overflow: hidden;
@@ -119,23 +121,16 @@ article p {
 .slide {
     display: none; /* Hide all slides by default */
     width: 100%;
-    height: 700px; /* Set the height of the slide */
+    height: 60vh; /* Use a percentage of viewport height */
+    max-height: 500px; /* Prevent it from being too tall */
     border-radius: 10px;
     overflow: hidden; /* Prevent any part of the image from peeking out */
 }
 
-/* Ensure images cover the slide container without leaving empty space */
-.slide img {
-    width: 100%;
-    height: 100%; /* Make the image fill the slide container's height */
-    object-fit: cover; /* Keep the aspect ratio while covering the container */
-    border-radius: 10px;
-}
-/* For videos */
-.slide video {
+.slide img, .slide video {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensure the video fills the container */
+    object-fit: cover;
     border-radius: 10px;
 }
 .fade {
