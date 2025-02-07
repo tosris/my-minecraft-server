@@ -130,7 +130,7 @@
             const response = await fetch(`https://api.mcsrvstat.us/2/${serverIP}`);
             const data = await response.json();
             if (data.online) {
-                document.getElementById("player-count").textContent = `${data.players.online} / ${data.players.max}`;
+                document.getElementById("player-count").textContent = `${data.players.online}`;
             } else {
                 document.getElementById("player-count").textContent = "Offline";
             }
