@@ -243,3 +243,31 @@ article p {
         opacity: 0;
     }
 }
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .slideshow-container {
+        width: 95%; /* Make it wider on smaller screens */
+    }
+
+    .slide {
+        height: 50vh; /* Adjust height dynamically */
+        max-height: 400px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .slideshow-container {
+        width: 100%; /* Use full width for very small screens */
+    }
+
+    .slide {
+        height: 40vh;
+        max-height: 300px;
+    }
+
+    .prev, .next {
+        font-size: 14px; /* Reduce button size on small screens */
+        padding: 10px;
+    }
+}
+
