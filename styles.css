@@ -112,9 +112,10 @@ article p {
     width: 90%; /* Use a percentage width for responsiveness */
     max-width: 700px; /* Set a max-width to prevent excessive stretching */
     min-width: 300px; /* Prevent it from becoming too small */
-    margin: auto;
+    margin: 0 auto;
     border-radius: 10px;
     overflow: hidden;
+    justify-content: center; /* Ensures content stays centered */
 }
 
 /* Ensure slides maintain a good size */
@@ -125,6 +126,7 @@ article p {
     max-height: 500px; /* Prevent it from being too tall */
     border-radius: 10px;
     overflow: hidden;
+    text-align: center; /* Ensures inner content is centered */
 }
 
 /* Ensure images and videos fit properly */
