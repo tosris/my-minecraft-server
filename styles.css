@@ -306,3 +306,69 @@ body, html {
     margin: 0;
     padding: 0;
 }
+.news-section {
+    width: 90%; /* Samma bredd som slideshowen */
+    max-width: 700px; /* Matchar maxbredden för slideshow */
+    min-width: 300px; /* Minsta bredden för små skärmar */
+    margin: 30px auto; /* Centrerar och ger mellanrum */
+    padding: 20px;
+    background: #222; /* Mörk bakgrund för kontrast */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: left; /* Justerar texten till vänster */
+}
+
+.news-section h2 {
+    text-align: center;
+    color: #ffd700; /* Samma färg som andra rubriker */
+    margin-bottom: 15px;
+}
+
+.news-post {
+    background: #333; /* Matchar temat */
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.news-post h3 {
+    margin: 0;
+    color: #ffd700;
+    font-family: 'Caveat', cursive; /* Samma stil som andra rubriker */
+}
+
+.news-post p {
+    color: #ddd;
+    font-size: 0.95em;
+    margin-top: 5px;
+}
+
+.news-date {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.85em;
+    color: #aaa;
+}
+
+/* Responsiv anpassning */
+@media screen and (max-width: 768px) {
+    .news-section {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .news-section {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .news-post p {
+        font-size: 0.9em;
+    }
+
+    .news-date {
+        font-size: 0.8em;
+    }
+}
