@@ -109,27 +109,25 @@ article p {
 /* Slideshow Styles */
 .slideshow-container {
     position: relative;
-    width: 90%; /* Makes it responsive */
-    max-width: 700px; /* Prevents excessive stretching */
-    min-width: 300px; /* Prevents it from being too small */
-    margin: 0 auto; /* Ensures centering */
+    width: 90%; /* Use a percentage width for responsiveness */
+    max-width: 700px; /* Set a max-width to prevent excessive stretching */
+    min-width: 300px; /* Prevent it from becoming too small */
+    margin: auto;
     border-radius: 10px;
     overflow: hidden;
-    display: flex; /* Helps with centering */
-    justify-content: center; /* Centers content */
 }
 
-/* Ensure no overflow is visible in the slide */
+/* Ensure slides maintain a good size */
 .slide {
-    display: none; /* Hide all slides by default */
+    display: none;
     width: 100%;
     height: 60vh; /* Use a percentage of viewport height */
     max-height: 500px; /* Prevent it from being too tall */
     border-radius: 10px;
-    overflow: hidden; /* Prevent any part of the image from peeking out */
-    text-align: center; /* Ensures inner content is centered */
+    overflow: hidden;
 }
 
+/* Ensure images and videos fit properly */
 .slide img, .slide video {
     width: 100%;
     height: 100%;
@@ -247,21 +245,21 @@ article p {
     }
 }
 
-/* Fix for small screens */
+/* Media query for smaller screens */
 @media screen and (max-width: 768px) {
     .slideshow-container {
-        width: 95%;
+        width: 95%; /* Make it wider on smaller screens */
     }
 
     .slide {
-        height: 50vh;
+        height: 50vh; /* Adjust height dynamically */
         max-height: 400px;
     }
 }
 
 @media screen and (max-width: 480px) {
     .slideshow-container {
-        width: 100%; /* Use full width */
+        width: 100%; /* Use full width for very small screens */
     }
 
     .slide {
@@ -270,7 +268,7 @@ article p {
     }
 
     .prev, .next {
-        font-size: 14px; /* Adjust button size */
+        font-size: 14px; /* Reduce button size on small screens */
         padding: 10px;
     }
 }
