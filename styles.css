@@ -274,4 +274,26 @@ article p {
         padding: 10px;
     }
 }
+/* Footer Styles */
+footer {
+    background-color: #1a1a1a; /* Matches the rest of the site */
+    color: #bbb; /* Subtle grey text */
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9em;
+    margin-top: 40px; /* Space from content above */
+}
 
+/* Space out the footer content */
+.footer-content {
+    margin: 5px 0;
+    opacity: 0.8; /* Make it even more subtle */
+}
+
+/* Ensure readability on small screens */
+@media screen and (max-width: 480px) {
+    footer {
+        font-size: 0.8em;
+        padding: 10px 0;
+    }
+}
