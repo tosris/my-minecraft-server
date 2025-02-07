@@ -11,7 +11,7 @@ body {
 .container {
     width: 60%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0;
     border-radius: 10px;
     background-color: #1a1a1a; /* Match container background to body */
     color: #fff; /* Keep text white for good contrast */
@@ -115,10 +115,8 @@ article p {
     margin: 0 auto;
     border-radius: 10px;
     overflow: hidden;
-    justify-content: center; /* Ensures content stays centered */
-    display: flex;
-    flex-direction: column; /* Ensures proper stacking */
-    align-items: center; /* Centers content horizontally */
+    display: block; /* Removes unnecessary flexbox */
+    text-align: center; /* Ensures child elements align properly */
 }
 
 /* Ensure slides maintain a good size */
