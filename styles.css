@@ -116,6 +116,9 @@ article p {
     border-radius: 10px;
     overflow: hidden;
     justify-content: center; /* Ensures content stays centered */
+    display: flex;
+    flex-direction: column; /* Ensures proper stacking */
+    align-items: center; /* Centers content horizontally */
 }
 
 /* Ensure slides maintain a good size */
@@ -127,6 +130,7 @@ article p {
     border-radius: 10px;
     overflow: hidden;
     text-align: center; /* Ensures inner content is centered */
+    margin: 0 auto; /* Ensures centering */
 }
 
 /* Ensure images and videos fit properly */
@@ -296,4 +300,9 @@ footer {
         font-size: 0.8em;
         padding: 10px 0;
     }
+}
+body, html {
+    overflow-x: hidden; /* Prevents overflow issues */
+    margin: 0;
+    padding: 0;
 }
