@@ -109,12 +109,14 @@ article p {
 /* Slideshow Styles */
 .slideshow-container {
     position: relative;
-    width: 90%; /* Use a percentage width for responsiveness */
-    max-width: 700px; /* Set a max-width to prevent excessive stretching */
-    min-width: 300px; /* Prevent it from becoming too small */
-    margin: auto;
+    width: 90%; /* Makes it responsive */
+    max-width: 700px; /* Prevents excessive stretching */
+    min-width: 300px; /* Prevents it from being too small */
+    margin: 0 auto; /* Ensures centering */
     border-radius: 10px;
     overflow: hidden;
+    display: flex; /* Helps with centering */
+    justify-content: center; /* Centers content */
 }
 
 /* Ensure no overflow is visible in the slide */
@@ -125,6 +127,7 @@ article p {
     max-height: 500px; /* Prevent it from being too tall */
     border-radius: 10px;
     overflow: hidden; /* Prevent any part of the image from peeking out */
+    text-align: center; /* Ensures inner content is centered */
 }
 
 .slide img, .slide video {
@@ -243,21 +246,22 @@ article p {
         opacity: 0;
     }
 }
-/* Media query for smaller screens */
+
+/* Fix for small screens */
 @media screen and (max-width: 768px) {
     .slideshow-container {
-        width: 95%; /* Make it wider on smaller screens */
+        width: 95%;
     }
 
     .slide {
-        height: 50vh; /* Adjust height dynamically */
+        height: 50vh;
         max-height: 400px;
     }
 }
 
 @media screen and (max-width: 480px) {
     .slideshow-container {
-        width: 100%; /* Use full width for very small screens */
+        width: 100%; /* Use full width */
     }
 
     .slide {
@@ -266,7 +270,7 @@ article p {
     }
 
     .prev, .next {
-        font-size: 14px; /* Reduce button size on small screens */
+        font-size: 14px; /* Adjust button size */
         padding: 10px;
     }
 }
