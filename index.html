@@ -28,6 +28,7 @@
                 <h1 id="ip-address">IP: 4qs.se</h1>
                 <button id="copy-btn">Kopiera IP</button>
             </div>
+            <p>Spelare online: <span id="player-count">Laddar...</span></p>
             <div class="slideshow-container">
                 <div class="slide fade active">
                     <img src="image1.jpg" alt="Image 1" style="width:100%">
@@ -123,6 +124,23 @@
         setInterval(function() {
             showSlides(slideIndex += 1);
         }, 15000); 
+            async function fetchPlayerCount() {
+        const serverIP = "4qs.se"; // Ersätt med din server-IP
+        try {
+            const response = await fetch(`https://api.mcsrvstat.us/2/${serverIP}`);
+            const data = await response.json();
+            if (data.online) {
+                document.getElementById("player-count").textContent = `${data.players.online} / ${data.players.max}`;
+            } else {
+                document.getElementById("player-count").textContent = "Offline";
+            }
+        } catch (error) {
+            document.getElementById("player-count").textContent = "Fel vid hämtning";
+        }
+    }
+
+    fetchPlayerCount();
+    setInterval(fetchPlayerCount, 30000); // Uppdatera var 30:e sekund
     </script>
 </body>
 </html>
