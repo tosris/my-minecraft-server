@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     padding: 20px;
     border-radius: 10px;
@@ -107,7 +107,7 @@ article p {
 /* Slideshow Styles */
 .slideshow-container {
     position: relative;
-    width: 90%; /* Use a percentage width for responsiveness */
+    width: 100%; /* Use a percentage width for responsiveness */
     max-width: 700px; /* Set a max-width to prevent excessive stretching */
     min-width: 300px; /* Prevent it from becoming too small */
     margin: 0 auto;
@@ -262,7 +262,7 @@ article p {
 /* Media query for smaller screens */
 @media screen and (max-width: 768px) {
     .slideshow-container {
-        width: 95%; /* Make it wider on smaller screens */
+        width: 100%; /* Make it wider on smaller screens */
     }
 
     .slide {
@@ -315,7 +315,7 @@ body, html {
     padding: 0;
 }
 .news-section {
-    width: 90%;
+    width: 100%;
     max-width: 700px;
     min-width: 300px;
     margin: 30px auto;
