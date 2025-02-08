@@ -16,7 +16,7 @@
         <nav>
             <ul>
                 <li><a href="/handbook/">Handbok</a></li>
-                <li><a href="https://mc.4qs.se:8443/status">Status</a></li>
+                <!--<li><a href="https://mc.4qs.se:8443/status">Status</a></li>-->
                 <li><a href="http://mc.4qs.se:8080">Livekarta</a></li>
                 <li><a href="http://mc.4qs.se:8081/stats/index.html">Statistik</a></li>
                 <li><a href="https://forms.office.com/r/XSsVL5F9pT">Whitelist</a></li>
@@ -24,11 +24,7 @@
         </nav>
         <section>
             <h2>Välkommen in!</h2>
-            <div class="ip-container">
-                <h1> Spelare online: <span id="player-count">Laddar...</span></h1>
-                <h1 id="ip-address">IP: 4qs.se</h1>
-                <button id="copy-btn">Kopiera IP</button>
-            </div>
+
             <div class="slideshow-container">
                 <div class="slide fade active">
                     <img src="image1.jpg" alt="Image 1" style="width:100%">
@@ -57,9 +53,14 @@
                 <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
                 <a class="next" onclick="changeSlide(1)">&#10095;</a>
             </div>
+            <div class="ip-container">
+                <p><span id="player-count">Laddar...</span> Spelare online på:</p>
+                <p id="ip-address"> 4qs.se</p>
+                <button id="copy-btn">Kopiera IP</button>
+            </div>
         </section>
                 <section class="news-section">
-            <h2>Senaste Nyheterna</h2>
+            <h2>Nyheter</h2>
             <div class="news-post">
                 <img src="image2.jpg" alt="Ny uppdatering" class="news-image">
                 <div class="news-content">
@@ -130,7 +131,7 @@
             const response = await fetch(`https://api.mcsrvstat.us/2/${serverIP}`);
             const data = await response.json();
             if (data.online) {
-                document.getElementById("player-count").textContent = `${data.players.online} på`;
+                document.getElementById("player-count").textContent = `${data.players.online}`;
             } else {
                 document.getElementById("player-count").textContent = "Offline";
             }

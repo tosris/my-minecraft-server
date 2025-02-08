@@ -52,20 +52,16 @@ nav ul li a:hover {
     transform: scale(1.1); /* Slightly enlarge the link on hover */
 }
 
-.handbook-content {
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Space between text and links */
-}
+
 
 .handbook-text {
-    width: 60%; /* Left side width */
-    text-align: left; /* Align text to the left */
+    margin: 0 auto;
+    width: 25%; /* Left side width */
+    text-align: left;
+
 }
 
-.chapter-links {
-    width: 30%; /* Right side width */
-    text-align: left; /* Align links to the left */
-}
+
 
 .chapters {
     list-style-type: none;
@@ -220,6 +216,16 @@ article p {
     align-items: center; /* Vertically center the elements */
     justify-content: center; /* Center both horizontally */
     gap: 10px; /* Space between IP and button */
+}
+
+.ip-container p {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #fff;
+
+    font-family: 'Quicksand', sans-serif; /* Cozy font choice */
+
+
 }
 
 .copied-message {
