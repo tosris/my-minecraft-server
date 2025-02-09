@@ -16,7 +16,6 @@
         <nav>
             <ul>
                 <li><a href="/handbook/">Handbok</a></li>
-                <!--<li><a href="https://mc.4qs.se:8443/status">Status</a></li>-->
                 <li><a href="http://mc.4qs.se:8080">Livekarta</a></li>
                 <li><a href="http://mc.4qs.se:8081/stats/index.html">Statistik</a></li>
                 <li><a href="https://forms.office.com/r/XSsVL5F9pT">Whitelist</a></li>
@@ -24,7 +23,6 @@
         </nav>
         <section>
             <h2>Välkommen in!</h2>
-
             <div class="slideshow-container">
                 <div class="slide fade active">
                     <img src="image1.jpg" alt="Image 1" style="width:100%">
@@ -72,8 +70,6 @@
 
         </section>
     </div>
-
-    
     <footer>
     <div class="footer-content">Four Quarters © 2025</div>
     <div class="footer-content">Not approved, official, or associated with Mojang or Microsoft</div>
@@ -139,9 +135,8 @@
             document.getElementById("player-count").textContent = "Fel vid hämtning";
         }
     }
-
     fetchPlayerCount();
-    setInterval(fetchPlayerCount, 30000); // Uppdatera var 30:e sekund
+    setInterval(fetchPlayerCount, 30000); 
     </script>
 </body>
 </html>
