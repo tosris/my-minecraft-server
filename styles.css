@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Quicksand:wght@300&display=swap');
-
 /* */
-
 /*Generellt*/
 body {
     background-color: #1a1a1a; 
@@ -21,27 +19,22 @@ body {
     width: 50px;
     height: auto;
 }
-
 h1 {
     font-size: 3em;  
     color: #ffd700;
     font-family: 'Caveat', cursive;
 }
-
 h1, h2, h3 {
     color: #ffd700;
     font-family: 'Caveat', cursive; 
 }
-
 /*Handbok*/
-
 .handbook-text {
     margin: 0 auto;
     width: 100%; 
     text-align: left;
     max-width: 410px; 
     min-width: 300px; 
-
 }
 .chapters {
     list-style-type: none;
@@ -66,7 +59,6 @@ article p {
     text-align: left;
     padding: 0 20px;
 }
-
 /*Bildspel*/
 .slideshow-container {
     position: relative;
@@ -143,54 +135,108 @@ article p {
 .active {
     background-color: #717171; 
 }
-
 /*Huvud IP och kopieraknapp*/
 #ip-address {
     display: inline-block;
-    margin-right: 10px; 
     text-align: center; 
 }
 #copy-btn {
-    padding: 3px 8px;
-    background-color: #333333;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5); 
     color: white;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+@keyframes rotatePulse {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+#copy-btn::after {
+    content: "";
+    width: 40px; 
+    height: 40px;
+    position: absolute;
+    border: 2px solid white; 
+    border-radius: 50%;
+    clip-path: polygon(0% 25%, 100% 25%, 100% 75%, 0% 75%);
+    animation: rotatePulse 10s linear infinite;
+}
+#copy-btn::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    clip-path: polygon(25% 0%, 100% 50%, 25% 100%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+}
+.ip-container:hover #ip-address {
+    color: #ffd700;
+    transition: color 0.3s ease;
 }
 #copy-btn:hover {
-    background-color: #444444; 
+    background-color: #444; 
+    transform: scale(1.1) ; 
+    border: 2px solid #ffd700;
+    animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 5px rgba(255, 215, 0, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 15px rgba(255, 215, 0, 1);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(255, 215, 0, 0.7);
+    }
+}
+#copy-btn:active {
+    transform: scale(0.9); 
 }
 .ip-container {
+    display: flex;
+    flex-direction: column; 
     align-items: center; 
     justify-content: center; 
-    gap: 10px; 
     z-index: 3; 
-
 }
 .ip-container p {
     font-size: 1.2em;
     margin: 10px 0;
     color: #fff;
     font-family: 'Quicksand', sans-serif; 
-    
 }
 .copied-message {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #4caf50; 
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5); 
     color: white;
-    padding: 10px 20px;
-    border-radius: 4px;
+    padding: 6px 10px;
+    border-radius: 5px;
     font-size: 14px;
+    margin-top: 175px; 
     opacity: 0;
-    animation: fadeInOut 3s forwards; 
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
     z-index: 3; 
 
+}
+.show-message {
+    opacity: 1;
+    transform: translateY(0);
 }
 @keyframes fadeInOut {
     0% {
@@ -206,9 +252,7 @@ article p {
         opacity: 0;
     }
 }
-
 /*Sidfot*/
-
 footer {
     background-color: #1a1a1a; 
     color: #bbb; 
@@ -281,39 +325,31 @@ body, html {
     font-size: 0.85em;
     color: #aaa;
 }
-
-
 @media (max-width: 768px) {
     .content-container {
-        flex-direction: column; /* Stapla bildspelet och nyheterna vertikalt */
-        align-items: center; /* Centrera innehållet */
+        flex-direction: column; 
+        align-items: center; 
     }
-
     .slideshow-container {
-        width: 100%; /* Bildspelet tar hela bredden */
+        width: 100%; 
     }
-
     .news-section {
-        width: 90%; /* Nyhetssektionen blir bredare på mobil */
-        max-width: none; /* Tar bort maxbredd */
+        width: 90%; 
+        max-width: none; 
     }
-
     .news-post {
-        flex-direction: vertical; /* Gör nyhetsposterna horisontella för bättre mobilvy */
+        flex-direction: vertical; 
         align-items: center;
         text-align: left;
     }
-
     .news-image {
-        width: 100%; /* Gör bilden mindre */
+        width: 100%; 
         height: auto;
     }
-
     .news-content {
-        flex: 1; /* Låt texten ta upp resterande utrymme */
+        flex: 1;
     }
 }
-
 /*Huvud*/
 .banner {
     position: relative;
@@ -325,7 +361,6 @@ body, html {
     justify-content: center;
     overflow: hidden;
 }
-
 .banner::before {
     content: "";
     position: absolute;
@@ -339,7 +374,6 @@ body, html {
     background-color: #3DD7F5; 
     z-index: 1; /
 }
-
 .logo-container {
     display: flex;
     flex-direction: column;
@@ -348,12 +382,10 @@ body, html {
     z-index: 2; 
     margin-top: 50px; 
 }
-
 .logo {
     width: 120px; 
     animation: floatUpDown 3s infinite ease-in-out;
 }
-
 .banner::after {
     content: "";
     position: absolute;
@@ -366,25 +398,19 @@ body, html {
 
     z-index: 2; 
 }
-
-
 nav, .logo-container, h1 {
     position: relative;
     z-index: 3; 
 }
-
 @keyframes floatUpDown {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-5px); }
 }
-
-
 .slideshow-container {
     position: relative;
     margin-top: 50px; 
     z-index: 3;
 }
-
 /*Navigation*/
 nav {
     position: absolute;
@@ -395,18 +421,15 @@ nav {
     text-align: center;
     z-index: 5; 
 }
-
 nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
-
 nav ul li {
     display: inline;
     margin: 0 15px;
 }
-
 nav ul li a {
     color: #ccc; 
     text-decoration: none;
@@ -417,7 +440,6 @@ nav ul li a {
     padding: 10px 10px;
     transition: transform 0.3s ease, color 0.3s ease;
 }
-
 nav ul li a:hover {
     color: #ffffff; 
     transform: scale(1.1);
@@ -488,51 +510,42 @@ nav ul li a:hover {
     max-width: 1200px;
     margin: 0 auto;
 }
-/*Spelarlista*/
 .players-online {
-    display: none; /* Hidden by default */
+    display: none; 
     width: 100%;
     max-width: 600px;
     color: white;
     border-radius: 10px;
     margin-bottom: 20px;
-    text-align: center; /* Centers inline elements */
+    text-align: center; 
 }
-
 #player-list {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
 }
-
 .player {
     display: flex;
     align-items: center;
-    padding: 10px;
     border-radius: 5px;
 }
-
 .player img {
-    width: 30px;
-    height: 30px;
-    border-radius: 5px;
+    width: 15px;
+    height: 15px;
     margin-right: 10px;
 }
-
 @media (max-width: 768px) {
     .players-online {
         width: 90%;
         margin: auto;
     }
 }
-
 .menu {
     flex-direction: column; 
     text-align: center;
 
 }
-
 .menu-toggle {
     display: none; 
     font-size: 30px;
@@ -540,25 +553,46 @@ nav ul li a:hover {
     color: #fff;
     padding: 10px;
 }
-
-
 @media screen and (max-width: 768px) {
     nav ul {
         display: none; 
         background: rgba(0, 0, 0, 0.6); 
-
     }
-
     .menu-toggle {
         display: block; 
     }
-
     .menu.show {
         display: flex; 
     }
-
     .menu li {
         margin: 10px 0; 
-
     }
+}
+#firework-container {
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    pointer-events: none; 
+    z-index: 9999; 
+    top: 0;
+    left: 0;
+}
+@keyframes firework {
+    0% {
+        transform: scale(0) translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2) translateY(-200px); 
+        opacity: 0;
+    }
+}
+.firework {
+    position: absolute;
+    background: radial-gradient(circle, yellow, orange, red);
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    animation: firework 1s forwards;
+    opacity: 0;
 }
