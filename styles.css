@@ -369,7 +369,7 @@ body, html {
     background-image: url('/image/image2.jpg'); 
     background-size: cover;
     background-position: center;
-    z-index: 1; /
+    z-index: 1; 
 }
 .logo-container {
     display: flex;
