@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Quicksand:wght@300&display=swap');
-/* */
+
 /*Generellt*/
 body {
     background-color: #1a1a1a; 
@@ -232,7 +232,6 @@ article p {
     transform: translateY(-10px);
     transition: opacity 0.3s ease, transform 0.3s ease;
     z-index: 3; 
-
 }
 .show-message {
     opacity: 1;
@@ -271,7 +270,6 @@ body, html {
     margin: 0;
     padding: 0;
 }
-
 /*Händelseflöde*/
 .news-section {
     width: 30%;
@@ -371,7 +369,6 @@ body, html {
     background-image: url('/image/image2.jpg'); 
     background-size: cover;
     background-position: center;
-    background-color: #3DD7F5; 
     z-index: 1; /
 }
 .logo-container {
