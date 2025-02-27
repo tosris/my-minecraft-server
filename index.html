@@ -34,7 +34,6 @@
                 </div>
             </div>
         </header>
- 
         <section class="content-container">            
             <div class="slideshow-container">
                 <div class="slide fade active">
@@ -43,7 +42,6 @@
                         <p>Tryck på livekarta längst upp för att visa denna i fullskärm</p>
                     </div>
                 </div>
-
                 <div class="slide fade">
                     <img src="/image/image2.jpg" alt="Image 2" style="width:100%">
                     <div class="slide-banner">
@@ -58,6 +56,16 @@
                     </div>
                 </div>
                 <div class="slide fade">
+                    <img src="/image/image4.jpg" alt="Image 4" style="width:100%">
+                    <div class="slide-banner">
+                        <p>Första minuten på servern</p>
+                    </div>
+                </div>
+                <div class="slide fade">
+                    <img src="/image/image5.jpg" alt="Image 5" style="width:100%">
+
+                </div>
+                <div class="slide fade">
                     <video autoplay loop muted>
                     <source src="/image/blixt.mp4" type="video/mp4">
                     Your browser does not support the video tag.
@@ -68,22 +76,29 @@
                     <span class="dot" onclick="currentSlide(2)"></span>
                     <span class="dot" onclick="currentSlide(3)"></span>
                     <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
                 </div>
-                
                 <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
                 <a class="next" onclick="changeSlide(1)">&#10095;</a>
             </div>
-
                 <section class="news-section">
                     <div class="players-online">
                         <h2>Uppkopplade spelare</h2>
                         <div id="player-list">
-
                         </div>
                     </div>
             <h2>Händelser</h2>
-            <div class="news-post" onclick="openModal('A new beginning!', 'Ett nytt äventyr väntar, välkommen in i vibben!', '/image/image2.jpg', '2025-02-22')">
-                <img src="/image/image2.jpg" alt="Ny uppdatering" class="news-image">
+            <div class="news-post" onclick="openModal('Vi är igång!', 'Äventyret har startat, välkommen!', '/image/news1.jpg', '2025-02-27')">
+                <img src="/image/news1.jpg" alt="Ny uppdatering" class="news-image">
+                <div class="news-content">
+                    <h3>Vi är igång!</h3>
+                    <p>Äventyret har startat, välkommen!</p>
+                    <span class="news-date">Publicerad: 2025-02-27</span>
+                </div>
+            </div>
+            <div class="news-post" onclick="openModal('A new beginning!', 'Ett nytt äventyr väntar, välkommen in i vibben!', '/image/news0.jpg', '2025-02-22')">
+                <img src="/image/news0.jpg" alt="Ny uppdatering" class="news-image">
                 <div class="news-content">
                     <h3>A new beginning!</h3>
                     <p>Ett nytt äventyr väntar, välkommen in i vibben!</p>
@@ -92,7 +107,6 @@
             </div>
         </section>
     </section>
-
         <div id="newsModal" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="closeModal()">&times;</span>
@@ -110,4 +124,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-

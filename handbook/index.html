@@ -25,27 +25,54 @@
             </div>
         </header>
         <section>
-       
         <div class="handbook-content">
             <div class="handbook-text">
                 <h2>Välkommen till servern 4QS!</h2>
                 <p>Idén bakom denna server är att i stort sett allt ska vara tillåtet, så länge du är respektfull och inte förstör för andra spelare så kan du bygga den där stora statyn eller en komplex redstone-lösning. Valet är ditt. Välkommen in!</p>
                 <p></p>
                 <p>Servern är öppen 24/7 och kör alltid den senaste versionen av Minecraft.</p>
-                <p></p>
+                <p id="days-open"></p>
             </div>
         </div>
         </section>
     </div>
     <footer>
-    <div class="footer-content">Four Quarters © 2025</div>
-    <div class="footer-content">Not approved, official or associated with Mojang or Microsoft</div>
+    <div class="footer-content-handbook">Four Quarters © 2025</div>
+    <div class="footer-content-handbook">Not approved, official or associated with Mojang or Microsoft</div>
     </footer>
     <script>
     document.getElementById("menu-toggle").addEventListener("click", function() {
         var menu = document.getElementById("menu");
         menu.classList.toggle("show"); 
     });
+        const startDate = new Date("2025-02-22T20:18:53");
+        const daysOpenElement = document.getElementById("days-open");
+        let interval;
+        function updateDaysOpen() {
+            const currentDate = new Date();
+            const timeDiff = currentDate - startDate;
+            const daysOpen = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+            daysOpenElement.textContent = "Servern har varit öppen i " + daysOpen + " dagar sedan den startades 22 februari 2025.";
+        }
+        function updateLiveCounter() {
+            const currentDate = new Date();
+            const timeDiff = currentDate - startDate;
+            const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+
+            daysOpenElement.textContent = `Servern har varit öppen i ${days} dagar, ${hours} timmar, ${minutes} minuter och ${seconds} sekunder sedan den startades 22 februari 2025 kl. 20:18:53.`;
+        }
+        daysOpenElement.addEventListener("mouseenter", function() {
+            updateLiveCounter();
+            interval = setInterval(updateLiveCounter, 1000);
+        });
+        daysOpenElement.addEventListener("mouseleave", function() {
+            clearInterval(interval);
+            updateDaysOpen();
+        });
+        updateDaysOpen();
     </script>
 </body>
 </html>
