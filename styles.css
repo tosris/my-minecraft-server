@@ -474,6 +474,21 @@ nav ul li a:hover {
     text-align: left;
     color: white;
 }
+.modal-content h3 {
+    
+    margin: 0;
+    font-size: 0.95em;
+    color: #ddd;
+    font-family: 'Quicksand', sans-serif; 
+    font-weight: bold;
+    margin-top: 5px; 
+
+}
+.modal-content p {
+    color: #ddd;
+    font-size: 0.95em;
+    margin-top: 5px;
+}
 .modal-image {
     width: 100%;
     border-radius: 5px;
