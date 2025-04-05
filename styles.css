@@ -36,6 +36,11 @@ h1, h2, h3 {
     max-width: 410px; 
     min-width: 300px; 
 }
+
+.handbook-text h2 {
+    color: #ddd;
+    margin-bottom: 15px;
+}
 .chapters {
     list-style-type: none;
     padding-left: 0;
@@ -618,4 +623,31 @@ nav ul li a:hover {
     height: 10px;
     animation: firework 1s forwards;
     opacity: 0;
+}
+.info-box {
+    background-color: #333;
+    border-left: 6px solid #00ff96;
+    padding: 15px 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 410px;
+    border-radius: 8px;
+    color: #fff;
+    font-family: 'Quicksand', sans-serif;
+}
+.info-box h2 {
+    margin-top: 0;
+    color: #fff;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.3em;
+}
+.info-box a {
+    color: #1e90ff; 
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+.info-box a:hover {
+    transform: scale(1.05); 
 }
