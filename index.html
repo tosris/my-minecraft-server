@@ -14,15 +14,17 @@
                 <div class="menu-toggle" id="menu-toggle">&#9776;</div> 
                 <ul class="menu" id="menu">
                     <li><a href="/handbook/">Handbok</a></li>
+                    <li><a href="/gallery/">Galleri</a></li>
                     <li><a href="http://mc.4qs.se:8123">Livekarta</a></li>
                     <li><a href="http://mc.4qs.se:8123/stats/index.html">Statistik</a></li>
                     <li><a href="https://forms.office.com/r/XSsVL5F9pT">Whitelist</a></li>
                 </ul>
             </nav>
+            <a href="/" class="logo-link">
             <div class="logo-container">
                 <img src="/image/favicon.png" alt="Server Logo" class="logo">
                 <h1>Four Quarters</h1>
-            </div>
+            </div></a>
             <div class="ip-container">
                 <p><span id="player-count">Laddar...</span> </p>
                 <p id="ip-address">IP: 4qs.se</p>
@@ -34,7 +36,12 @@
                 </div>
             </div>
         </header>
-        <section class="content-container">            
+<!--         <div class="news-ticker">
+            <div class="ticker-content" id="ticker">
+            </div>
+          </div> -->
+        <section class="content-container">  
+            <!-- <div class="left-column"> -->
             <div class="slideshow-container">
 
                 <div class="slide fade">
@@ -94,14 +101,50 @@
                 </div>
                 <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
                 <a class="next" onclick="changeSlide(1)">&#10095;</a>
+
             </div>
+<!--             <div class="extra-section">
+                <section class="feature-section">
+                    <div class="feature-item">
+                        <div class="feature-text">
+                            <h2>JUST NU:</h2>
+                            <p>Vasa 2 står ankrad i hamnen!</p>
+                        </div>
+                        <div class="feature-image">
+                            <img src="/image/feature1.jpg" alt="Stability">
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item reversed">
+                        <div class="feature-text">
+                            <h2>På gång:</h2>
+                            <p> Minecraft version 1.21.5 kommer väldigt snart till servern!</p>
+                        </div>
+                        <div class="feature-image">
+                            <img src="/image/image3.jpg" alt="Plugins">
+                        </div>
+                    </div>
+                
+                    <div class="feature-item">
+                        <div class="feature-text">
+                            <h2>Nyhet:</h2>
+                            <p>Servern har nu proximity voicechat, se fliken Handbok för mer info!</p>
+                        </div>
+                        <div class="feature-image">
+                            <img src="/image/image2.jpg" alt="Players">
+                        </div>
+                    </div>
+                </section>
+            
+            </div> -->
+        <!-- </div> -->
                 <section class="news-section">
                     <div class="players-online">
-                        <h2>Uppkopplade spelare</h2>
+                        <h3>Uppkopplade spelare</h3>
                         <div id="player-list">
                         </div>
                     </div>
-            <h2>Händelser</h2>
+            <h3>Händelser</h3>
             <div class="news-post" onclick="openModal('Voicechat och byggnationer!', 'Servern har nu voicechat och allt fler byggnader konstrueras. Mer info om Voicechat i fliken Handbok.', '/image/news3.jpg', '2025-04-05')">
                 <img src="/image/news3.jpg" alt="Ny uppdatering" class="news-image">
                 <div class="news-content">
@@ -127,7 +170,10 @@
                 </div>
             </div>
         </section>
+
     </section>
+
+    
         <div id="newsModal" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="closeModal()">&times;</span>

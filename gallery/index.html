@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" type="image/png" href="../image/favicon.png"> 
+    <title>Galleri • Four Quarters</title>
+</head>
+<body>
+    <div class="container">
+        <header class="banner">
+            <nav>
+                <div class="menu-toggle" id="menu-toggle">&#9776;</div> 
+                <ul class="menu" id="menu">
+                    <li><a href="../">Startsida</a></li>
+                    <li><a href="../handbook/">Handbok</a></li>
+                    <li><a href="http://mc.4qs.se:8123">Livekarta</a></li>
+                    <li><a href="http://mc.4qs.se:8123/stats/index.html">Statistik</a></li>
+                    <li><a href="https://forms.office.com/r/XSsVL5F9pT">Whitelist</a></li>
+                </ul>
+            </nav>
+            <a href="../" class="logo-link">
+            <div class="logo-container">
+                <img src="../image/favicon.png" alt="Server Logo" class="logo">
+                <h1>Four Quarters</h1>
+            </a>
+            </div>
+        </header>
+        <section>
+            <section id="gallery" class="image-gallery">
+                <h2>Galleri</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="/image/gallery0.jpg" alt="Bild 0">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/image/gallery1.jpg" alt="Bild 1">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/image/gallery2.jpg" alt="Bild 2">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/image/gallery3.jpg" alt="Bild 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/image/gallery4.jpg" alt="Bild 4">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/image/gallery5.jpg" alt="Bild 5">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/image/gallery6.jpg" alt="Bild 6">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/image/gallery7.jpg" alt="Bild 7">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/image/gallery8.jpg" alt="Bild 8">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/image/gallery9.jpg" alt="Bild 9">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/image/gallery10.jpg" alt="Bild 10">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/image/gallery11.jpg" alt="Bild 11">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/image/gallery12.jpg" alt="Bild 12">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/image/gallery13.jpg" alt="Bild 13">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/image/gallery14.jpg" alt="Bild 14">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/image/gallery15.jpg" alt="Bild 15">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/image/gallery16.jpg" alt="Bild 16">
+                    </div>
+
+                </div>
+            </section>
+            <div id="imageModal" class="image-modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="modalImg">
+            </div>
+    </div>
+    <footer>
+    <div class="footer-content-handbook">Four Quarters © 2025</div>
+    <div class="footer-content-handbook">Not approved, official or associated with Mojang or Microsoft</div>
+    </footer>
+    <script>
+    document.getElementById("menu-toggle").addEventListener("click", function() {
+        var menu = document.getElementById("menu");
+        menu.classList.toggle("show"); 
+    });
+
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImg");
+    const closeBtn = document.querySelector(".image-modal .close");
+
+    document.querySelectorAll(".gallery-item img").forEach(img => {
+        img.addEventListener("click", () => {
+            modal.style.display = "block";
+            modalImg.src = img.src;
+        });
+    });
+
+    closeBtn.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function (event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    }
+
+
+    </script>
+</body>
+</html>

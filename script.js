@@ -101,3 +101,16 @@ document.getElementById("menu-toggle").addEventListener("click", function() {
     var menu = document.getElementById("menu");
     menu.classList.toggle("show"); 
 });
+const newsItems = [
+    "JUST NU: Vasa 2 står ankrad i hamnen",
+    "",
+    "På gång: Minecraft version 1.21.5 kommer väldigt snart till servern!",
+    "",
+    "Nyhet: Servern har nu proximity voicechat, se fliken Handbok för mer info!",
+    
+  ];
+
+  const ticker = document.getElementById("ticker");
+  ticker.innerHTML = newsItems
+    .map((item) => `<span>${item}</span>`)
+    .join("");

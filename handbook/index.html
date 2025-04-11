@@ -14,30 +14,80 @@
                 <div class="menu-toggle" id="menu-toggle">&#9776;</div> 
                 <ul class="menu" id="menu">
                     <li><a href="../">Startsida</a></li>
+                    <li><a href="../gallery/">Galleri</a></li>
                     <li><a href="http://mc.4qs.se:8123">Livekarta</a></li>
                     <li><a href="http://mc.4qs.se:8123/stats/index.html">Statistik</a></li>
                     <li><a href="https://forms.office.com/r/XSsVL5F9pT">Whitelist</a></li>
                 </ul>
             </nav>
-            <div class="logo-container">
-                <img src="../image/favicon.png" alt="Server Logo" class="logo">
-                <h1>Four Quarters</h1>
-            </div>
+            <a href="../" class="logo-link">
+                <div class="logo-container">
+                    <img src="../image/favicon.png" alt="Server Logo" class="logo">
+                    <h1>Four Quarters</h1>
+                </a>
         </header>
         <section>
         <div class="handbook-content">
             <div class="handbook-text">
-                <h2>Välkommen till servern 4QS!</h2>
-                <p>Idén bakom denna server är att i stort sett allt ska vara tillåtet, så länge du är respektfull och inte förstör för andra spelare så kan du bygga den där stora statyn eller en komplex redstone-lösning. Valet är ditt. Välkommen in!</p>
+                <h3>Välkommen till servern 4qs!</h3>
+                <p>Idén bakom denna server är att i stort sett allt ska vara tillåtet, så länge du är respektfull och inte förstör för andra spelare så kan du bygga den där stora statyn eller en komplex redstone-lösning. Valet är ditt.</p>
                 <p></p>
-                <p>Servern är öppen 24/7 och kör alltid den senaste versionen av Minecraft.</p>
+                <p>Servern är öppen 24/7, världen kommer aldrig raderas och servern kör alltid den senaste versionen av Minecraft så fort PaperMC uppdateras, vilket är den mjukvara som servern kör.</p>
                 <p id="days-open"></p>
+                <h3>Spelmodifikationer</h3>
+                <p>Detta är en server som kör mjukvaran PaperMC som möjliggör för en mer prestandaeffektiv server och mindre modifikationer. Servern är endast survival och är satt till Hard som svårighetsgrad. Men det finns några fler ändringar som gjorts, dessa finner du nedan. </p>
+
                 <div class="info-box">
                     <h2>Voicechat</h2>
                     <p>4QS använder  <a href="https://modrinth.com/plugin/simple-voice-chat" style="color: #fff; "target="_blank"><strong>Simple Voice Chat</strong></a> för att möjliggöra proximity voicechat inuti Minecraft. För att kunna använda det måste du installera moddet.</p>
                     <p>Varför har vi detta? Jo de är för att man ska kunna prata med andra spelare utan att nödvändigvis behöva sitta i samma discordkanal som ett exempel.</p>
                     <p>Titta på denna guide för hjälp med installation: <a href="https://www.youtube.com/watch?v=3GEgMF5skd4&list=LL&index=3" target="_blank">YouTube Guide</a></p>
                 </div>
+<!--                  <div class="dropdown">
+                    <button class="dropdown-toggle">Gravar</button>
+                    <article class="dropdown-content">
+                      <p>Dina saker despawnar inte efter fem minuter utan stannar kvar tills du väljer att leta dig tillbaka dit du dog. Du får ett meddelande i chatten med vilka koordinater du dog på.</p>
+                      <p>Kommandon:</p>
+                      <p>"/axgraves list" för att se positionen av alla dina nuvarande gravar</p>
+                    </article>
+                  </div>  -->
+                  <h3>Gravar</h3>
+                  <article>
+                      <p>Dina saker försvinner inte efter fem minuter utan stannar kvar tills du väljer att leta dig tillbaka dit du dog. Du får ett meddelande i chatten med vilka koordinater du dog på.</p>
+                      <p>Kommandon:</p>
+                      <p>"/axgraves list" för att se positionen av alla dina nuvarande gravar</p>
+                  </article>
+                <h3>Livekarta</h3>
+                <article>
+                    <p>Genom att trycka på Livekarta i navigationen längst upp kan en karta visas som visar vart spelare på servern upptäckt.</p>
+                    <p>Kommandon:</p>
+                    <p>"/dynmap hide" för att dölja dig från livekartan</p>
+                    <p>"/dynmap show" för att visa dig igen</p>
+                </article>
+                <h3>Statistik</h3>
+                <article>
+                    <p>Genom att trycka på Statistik i navigationen längst upp kan en sida visas där 100+ datapunkter från servern samlas om vem som huggt mest sten, dödat flest monster och mycket mera.</p>
+                </article>
+                <h3>Verktygsstatistik</h3>
+                <article>
+                    <p>På dina erhållna verktyg visas det mer information än i vanilla, exempelvis vem som craftat verktyget och när.</p>
+                </article>
+                <h3>Sovdags</h3>
+                <article>
+                    <p>Det räcker med att en person sover så hoppas natten över.</p>
+                </article>
+                <h3>Creepers</h3>
+                <article>
+                    <p>Explosioner av Creepers gör skada på spelare men ej terräng.</p>
+                </article>
+                <h3>Anpassade meddelanden</h3>
+                <article>
+                    <p>In och utloggningsmeddelanden har skrivits om från de tråkiga som är i standard.</p>
+                </article>
+                <h3>Kompatibilitet</h3>
+                <article>
+                    <p>Även om servern inte är på den Minecraft-version du kör så kommer du kunna koppla upp till den oavsett.</p>
+                </article>
 
             </div>
         </div>
@@ -80,6 +130,15 @@
             updateDaysOpen();
         });
         updateDaysOpen();
+        
+  /*       const toggles = document.querySelectorAll('.dropdown-toggle');
+
+toggles.forEach(toggle => {
+  toggle.addEventListener('click', () => {
+    const content = toggle.nextElementSibling;
+    content.style.display = (content.style.display === 'block') ? 'none' : 'block';
+  });
+}); */
     </script>
 </body>
 </html>
